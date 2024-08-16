@@ -1,0 +1,24 @@
+# union of two array in python 
+
+
+def union(arr1, arr2):
+    # for store elements of both array
+    arr=set()
+# add elements of array 1 in set
+    for num in arr1:
+        arr.add(num)
+# add elements of array 1 in set
+    for num in arr2:
+        arr.add(num)
+# convert into list to arrange in order
+    union = list(arr)
+    return union
+arr1 = [1,2,3,4]
+arr2 = [3,4,5,6]
+union = union(arr1, arr2)
+print("union of arr1 and arr2 is :", union)
+
+
+
+# time complexity is O(n1 + n2)
+# space complexity is O(n)
