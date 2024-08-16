@@ -1,0 +1,30 @@
+# Row with maximum of ones in python 
+
+
+def maximum(arr):
+    n = len(arr)        
+    m = len(arr[0]) 
+    maxcount = 0
+    index = -1
+    count = 0
+    for i in range(n):
+        for j in range(m-1,-1,-1):
+            if arr[i][j] == 1:
+                count += 1
+            else:
+                break
+        if count > maxcount:
+            maxcount = count
+            index = i
+    return index
+#value taken
+a = [
+    [0,0,0,1],
+    [0,0,1,1],
+    [0,1,1,1],
+]
+print("Row with maximum number of 1s is :", maximum(a))
+
+
+# space complexity O(1)
+# time complexity O(n x m)
