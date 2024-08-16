@@ -1,0 +1,20 @@
+# Print all the duplicate characters in a string in python
+
+
+def string(s):
+    # create an empty dictionary 
+    c={}
+    # count the number of same letter in the string
+    for char in s:
+        if char in c:
+            c[char]+=1
+        else:
+            c[char]=1
+    # print duplicate letter in the string
+    print("Duplicate characters are:".format(s))
+    for char,count in c.items():
+        if count>1:
+            print(char,end=' ')
+if _name_ == '_main_':
+    s="hello world"
+    string(s)
