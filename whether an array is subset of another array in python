@@ -1,0 +1,21 @@
+# whether an array is subset of another array in python 
+
+
+def subset(arr1,arr2):
+    i,j = 0,0
+    while i<len(arr1) and j<len(arr2):
+        if arr1[i]==arr2[j]:
+            i += 1
+        j += 1
+    return I == len(arr1)
+#value taken
+arr1=[1,2,3]  
+arr2=[1,2,3,4] 
+if(subset(arr1,arr2)):
+    print("arr1 is subset of arr2")
+else:
+    print("arr1 is not a subset of arr2")
+
+
+# time complexity is O(1) 
+# space complexity is O(1)
