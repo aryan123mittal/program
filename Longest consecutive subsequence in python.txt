@@ -1,0 +1,23 @@
+# Longest consecutive subsequence in python
+
+
+def sub(arr,x):
+    #empty array
+    a = []
+    #intialize to zero , count the length of the current consecutive sequence
+    c = 0
+    for i in range(x):
+        #check for that sequence start from arr[i]
+        n = 1
+        #check the current number exist in array or not
+        while arr[i] + n in arr:
+            c += 1
+            n += 1
+        a.append(c+1)
+        c = 0
+    return max(a)
+array = [9,6,1,2,4,3]
+print("Longest Consecutive Subsequence : ",sub(array,len(array)))
+
+#time complexity is O(1)
+#space complexity is O(n^2) 
