@@ -1,0 +1,13 @@
+# find the kth elemnet in an array in python
+
+
+def small(arr,k):
+    arr.sort() 
+    return arr[k-1]  
+arr=[7,10,4,3,20,15]
+k=3
+print(small(arr,k))  
+
+
+# time complexity O(nlogn)
+# space complexity O(logn)
