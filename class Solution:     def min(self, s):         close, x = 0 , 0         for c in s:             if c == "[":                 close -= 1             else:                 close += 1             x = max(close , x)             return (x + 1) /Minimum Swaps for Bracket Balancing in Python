@@ -1,0 +1,20 @@
+# Minimum Swaps for Bracket Balancing in Python
+
+
+class Solution:
+    def min(self, s):
+        close, x = 0 , 0
+        for c in s:
+            if c == "[":
+                close -= 1
+            else:
+                close += 1
+            x = max(close , x)    
+        return (x + 1) //2
+solution = Solution()
+s = input("Enter the string in terms of bracket :")
+print("Minimum number of swaps required :", solution.min(s))
+
+
+#time complexity is O(n)
+#space complexity is O(1)
