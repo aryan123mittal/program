@@ -1,0 +1,17 @@
+# Python program to Subarray with 0 sum
+
+
+def sum(arr,l):
+    for i in range(l-1):
+        s = arr[i]
+        for j in range(i+1,l):
+            s += arr[j]
+            if s == 0:
+                return True
+    return False
+a = [1,2,-3,4,5]
+print(sum(a,len(a)))
+
+
+#time complexity is O(n^2)
+#space complexity is O(1)
